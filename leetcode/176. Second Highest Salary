@@ -1,0 +1,5 @@
+SELECT MAX(salary) AS SecondHighestSalary
+FROM Employee
+WHERE salary < (SELECT MAX(salary) FROM Employee)
+
+--the max function will get the highest salary which is less than the highest salary
